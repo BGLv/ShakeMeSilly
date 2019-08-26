@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,99 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShakeMeSilly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="dhP-43-Zxq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CQY-LD-MAf">
+                                <rect key="frame" x="16" y="20" width="343" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CQY-LD-MAf" secondAttribute="height" multiplier="343:152" id="TYg-fs-Nta"/>
+                                </constraints>
+                                <string key="text">Shake Me
+Silly</string>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="67"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evs-wH-nco">
+                                <rect key="frame" x="16" y="486" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="ja0-ma-l2N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="67"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face1" translatesAutoresizingMaskIntoConstraints="NO" id="IUq-iF-Y9u">
+                                <rect key="frame" x="16" y="253" width="343" height="225"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP5-1H-Nky">
+                                <rect key="frame" x="16" y="559" width="343" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="Fly-qa-ukC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="50"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rvx-Rs-OkH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZA-ja-xSz">
+                                <rect key="frame" x="16" y="180" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="gP7-G4-Mmv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="67"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CQY-LD-MAf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0PR-6A-PkF"/>
+                            <constraint firstItem="dhP-43-Zxq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2Cd-zT-OW2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kP5-1H-Nky" secondAttribute="trailing" constant="16" id="7Yz-AL-nlv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="evs-wH-nco" secondAttribute="trailing" constant="16" id="BPo-O7-arr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IUq-iF-Y9u" secondAttribute="trailing" constant="16" id="D6G-B6-zK5"/>
+                            <constraint firstItem="IUq-iF-Y9u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DHq-4k-Kay"/>
+                            <constraint firstItem="CQY-LD-MAf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GsW-M6-Sma"/>
+                            <constraint firstItem="evs-wH-nco" firstAttribute="top" secondItem="IUq-iF-Y9u" secondAttribute="bottom" constant="8" id="KDO-vG-PnM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZZA-ja-xSz" secondAttribute="trailing" constant="16" id="Nw5-MO-Q4B"/>
+                            <constraint firstItem="ZZA-ja-xSz" firstAttribute="top" secondItem="CQY-LD-MAf" secondAttribute="bottom" constant="8" id="Oza-VA-rWp"/>
+                            <constraint firstItem="kP5-1H-Nky" firstAttribute="top" secondItem="evs-wH-nco" secondAttribute="bottom" constant="8" id="Uaf-AR-kBU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kP5-1H-Nky" secondAttribute="bottom" constant="20" id="VrP-jE-xgl"/>
+                            <constraint firstItem="evs-wH-nco" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZXc-dk-YLv"/>
+                            <constraint firstItem="dhP-43-Zxq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bS2-uB-vGm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQY-LD-MAf" secondAttribute="trailing" constant="16" id="hm8-aW-Wb1"/>
+                            <constraint firstItem="dhP-43-Zxq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rM2-TN-gIb"/>
+                            <constraint firstItem="IUq-iF-Y9u" firstAttribute="top" secondItem="ZZA-ja-xSz" secondAttribute="bottom" constant="8" id="rYf-R9-69x"/>
+                            <constraint firstAttribute="bottom" secondItem="dhP-43-Zxq" secondAttribute="bottom" id="tEX-ox-03Z"/>
+                            <constraint firstItem="kP5-1H-Nky" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uak-aK-doQ"/>
+                            <constraint firstItem="ZZA-ja-xSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wTE-a8-sQk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="IUq-iF-Y9u" id="U9S-GU-fFt"/>
+                        <outlet property="scoreLabel" destination="evs-wH-nco" id="m3u-hJ-D8Y"/>
+                        <outlet property="startGameButton" destination="kP5-1H-Nky" id="J78-QM-5dA"/>
+                        <outlet property="timeLabel" destination="ZZA-ja-xSz" id="M76-k7-qeS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="92.203898050974516"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+        <image name="Face1" width="512" height="512"/>
+    </resources>
 </document>
